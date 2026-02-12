@@ -1,8 +1,49 @@
-<h2>Signup</h2>
-<form method="POST">
-  <input name="username" placeholder="Username" required />
-  <input name="email" placeholder="Email" required />
-  <input name="password" type="password" placeholder="Password" required />
-  <button>Signup</button>
-</form>
-<a href="/login">Login</a>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-black via-gray-900 to-black text-white min-h-screen flex items-center justify-center">
+
+  <div class="w-full max-w-md bg-gray-900/70 backdrop-blur-xl p-8 rounded-3xl shadow-2xl border border-gray-800">
+
+    <h2 class="text-3xl font-bold mb-6 text-center">Create Account</h2>
+
+    <form method="POST" action="/signup" class="space-y-5">
+
+      <div>
+        <label class="text-sm text-gray-400">Username</label>
+        <input type="text" name="username" required
+          class="w-full mt-1 bg-gray-800 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      </div>
+
+      <div>
+        <label class="text-sm text-gray-400">Email</label>
+        <input type="email" name="email" required
+          class="w-full mt-1 bg-gray-800 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      </div>
+
+      <div>
+        <label class="text-sm text-gray-400">Password</label>
+        <input type="password" name="password" required
+          class="w-full mt-1 bg-gray-800 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      </div>
+
+      <button
+        class="w-full bg-indigo-600 hover:bg-indigo-500 transition py-3 rounded-xl font-semibold">
+        Sign Up
+      </button>
+
+    </form>
+
+    <p class="text-center text-gray-400 text-sm mt-6">
+      Already have an account?
+      <a href="/login" class="text-indigo-400 hover:underline">Login</a>
+    </p>
+
+  </div>
+
+</body>
+</html>
