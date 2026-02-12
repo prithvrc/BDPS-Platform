@@ -1,0 +1,15 @@
+<h2>Admin Panel</h2>
+<a href="/feed">Back</a>
+
+<% users.forEach(user => { %>
+  <div>
+    <strong><%= user.username %></strong> - <%= user.status %>
+    <form method="POST" action="/approve/<%= user.id %>" style="display:inline;">
+      <button>Approve</button>
+    </form>
+    <form method="POST" action="/reject/<%= user.id %>" style="display:inline;">
+      <button>Reject</button>
+    </form>
+  </div>
+  <hr>
+<% }) %>

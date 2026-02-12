@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #111827;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.sidebar nav a {
+  color: #9ca3af;
+  text-decoration: none;
+  margin-bottom: 15px;
+  display: block;
+  transition: 0.2s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav .active {
+  color: white;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.post-box {
+  background: #1f2937;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+}
+
+textarea {
+  width: 100%;
+  background: #111827;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  color: white;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+button {
+  background: #6366f1;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #4f46e5;
+}
+
+/* Cards */
+.card {
+  background: #1f2937;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.time {
+  color: #9ca3af;
+  font-size: 12px;
+}
