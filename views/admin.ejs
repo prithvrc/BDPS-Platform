@@ -1,15 +1,43 @@
-<h2>Admin Panel</h2>
-<a href="/feed">Back</a>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-<% users.forEach(user => { %>
-  <div>
-    <strong><%= user.username %></strong> - <%= user.status %>
-    <form method="POST" action="/approve/<%= user.id %>" style="display:inline;">
-      <button>Approve</button>
-    </form>
-    <form method="POST" action="/reject/<%= user.id %>" style="display:inline;">
-      <button>Reject</button>
-    </form>
+<body class="bg-black text-white min-h-screen px-4 py-6">
+
+  <div class="max-w-2xl mx-auto">
+
+    <h1 class="text-2xl font-bold mb-6">Admin Panel</h1>
+
+    <% users.forEach(user => { %>
+
+      <div class="bg-gray-900 p-4 rounded-2xl border border-gray-800 mb-4">
+
+        <div class="flex justify-between items-center">
+          <div>
+            <p class="font-semibold"><%= user.username %></p>
+            <p class="text-xs text-gray-500"><%= user.email %></p>
+          </div>
+
+          <div class="space-x-2">
+            <form method="POST" action="/approve/<%= user.id %>" class="inline">
+              <button class="text-green-400 text-sm">Approve</button>
+            </form>
+
+            <form method="POST" action="/reject/<%= user.id %>" class="inline">
+              <button class="text-red-400 text-sm">Reject</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    <% }) %>
+
   </div>
-  <hr>
-<% }) %>
+
+</body>
+</html>
